@@ -11,18 +11,18 @@ import {
   Users, 
   ChevronDown, 
   ChevronUp, 
-  Star,
   Zap,
   Code,
   Globe,
   Beaker,
   Calculator,
   PenTool,
-  Phone
+  Phone,
+  Rocket,
+  MessageCircle
 } from 'lucide-react';
 
 // --- Data: Curriculum ---
-// I have populated standard syllabus topics here. You can edit these lists easily.
 const CURRICULUM_DATA: Record<string, any> = {
   "Class 6": [
     {
@@ -143,7 +143,6 @@ export default function SkillsnapLanding() {
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
             <a href="#curriculum" className="hover:text-orange-600 transition-colors">Courses</a>
             <a href="#parents" className="hover:text-orange-600 transition-colors">For Parents</a>
-            <a href="#reviews" className="hover:text-orange-600 transition-colors">Reviews</a>
             <button onClick={scrollToContact} className="hover:text-orange-600 transition-colors">Contact Us</button>
           </div>
           <button 
@@ -167,8 +166,8 @@ export default function SkillsnapLanding() {
           <div>
             <FadeIn>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
-                <Zap size={14} fill="currentColor" />
-                Trusted by 500+ Parents
+                <Rocket size={14} fill="currentColor" />
+                Strong Foundations for Future Skills
               </div>
               <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
                 Master the Syllabus. <br/>
@@ -181,7 +180,7 @@ export default function SkillsnapLanding() {
               </p>
             </FadeIn>
 
-            {/* Lead Form Box (Changed to Contact) */}
+            {/* Lead Form Box (Contact) */}
             <FadeIn delay={0.2}>
               <div id="contact-form" className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md scroll-mt-24">
                 <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
@@ -217,7 +216,7 @@ export default function SkillsnapLanding() {
                   alt="Happy student learning coding" 
                   className="w-full h-full object-cover object-[70%_center]"
                 />
-                 {/* Gradient Overlay for Text Readability if needed */}
+                 {/* Gradient Overlay for Text Readability */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
              </div>
              
@@ -232,20 +231,24 @@ export default function SkillsnapLanding() {
                text="Tech Wizard" 
                className="bottom-20 -right-5" 
              />
+             
+             {/* Replaced 'Review' with 'Feature Highlight' for authenticity */}
              <div className="absolute bottom-10 left-10 p-4 bg-white/90 backdrop-blur rounded-xl shadow-lg border border-teal-100 max-w-[200px]">
-                <div className="flex gap-1 text-amber-400 mb-1">
-                  {[...Array(5)].map((_,i) => <Star key={i} size={12} fill="currentColor" />)}
+                <div className="flex gap-2 items-center text-teal-600 mb-1">
+                  <MessageCircle size={16} fill="currentColor" />
+                  <span className="text-xs font-bold uppercase tracking-wide">Included</span>
                 </div>
-                <p className="text-xs font-semibold text-gray-700">"My son loves the new syllabus!"</p>
+                <p className="text-sm font-bold text-gray-800">Live Doubt Solving</p>
+                <p className="text-xs text-gray-500">Every Weekend</p>
              </div>
           </div>
         </div>
       </section>
 
-      {/* --- Social Proof --- */}
+      {/* --- Social Proof (Brand Associations) --- */}
       <section className="py-10 border-y border-gray-100 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Trusted by parents from top schools</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Designed for students from top schools</p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
              {/* Placeholders for logos */}
              {['DPS', 'Ryan International', 'Kendriya Vidyalaya', 'Dav Public School'].map((school) => (
@@ -428,44 +431,6 @@ export default function SkillsnapLanding() {
                 </div>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- Testimonials --- */}
-      <section id="reviews" className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Real Stories</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-             {/* Parent Review */}
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
-               <div className="absolute -top-4 -left-4 w-12 h-12 bg-orange-500 text-white flex items-center justify-center rounded-full text-2xl font-serif">"</div>
-               <p className="text-gray-700 italic mb-6">
-                 "I was worried about online classes being a waste of time. But SkillSnap is different. My son actually finishes his Maths homework to unlock his Coding class. It's brilliant."
-               </p>
-               <div className="flex items-center gap-3">
-                 <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
-                 <div>
-                   <p className="font-bold text-gray-900">Mrs. Sharma</p>
-                   <p className="text-xs text-gray-500">Parent of Class 8 Student</p>
-                 </div>
-               </div>
-             </div>
-
-             {/* Student Review */}
-             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-teal-500 text-white flex items-center justify-center rounded-full text-2xl font-serif">"</div>
-               <p className="text-gray-700 italic mb-6">
-                 "Science used to be boring. Now I watch the animated experiments and I understand everything. Also, I made my own website last week!"
-               </p>
-               <div className="flex items-center gap-3">
-                 <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
-                 <div>
-                   <p className="font-bold text-gray-900">Aryan K.</p>
-                   <p className="text-xs text-gray-500">Class 7 Student</p>
-                 </div>
-               </div>
-             </div>
           </div>
         </div>
       </section>
