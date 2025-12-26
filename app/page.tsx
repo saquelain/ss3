@@ -39,7 +39,7 @@ const CURRICULUM_DATA: Record<string, any> = {
     {
       subject: "Mathematics",
       icon: Calculator,
-      color: "text-blue-600",
+      color: "text-blue-700",
       bg: "bg-blue-100",
       topics: ["Number System", "Integers & Fractions", "Algebra Introduction", "Basic Geometry", "Data Handling", "Mensuration"]
     },
@@ -59,25 +59,25 @@ const CURRICULUM_DATA: Record<string, any> = {
     }
   ],
   "Class 7": [
-    { subject: "Mathematics", icon: Calculator, color: "text-blue-600", bg: "bg-blue-100", topics: ["Integers", "Fractions & Decimals", "Simple Equations", "Lines & Angles", "Triangle Properties"] },
+    { subject: "Mathematics", icon: Calculator, color: "text-blue-700", bg: "bg-blue-100", topics: ["Integers", "Fractions & Decimals", "Simple Equations", "Lines & Angles", "Triangle Properties"] },
     { subject: "Science", icon: Beaker, color: "text-teal-600", bg: "bg-teal-100", topics: ["Nutrition in Plants/Animals", "Heat", "Acids, Bases & Salts", "Physical & Chemical Changes"] },
     { subject: "Social Science", icon: Globe, color: "text-orange-600", bg: "bg-orange-100", topics: ["Environment", "Inside Our Earth", "New Kings & Kingdoms", "Role of Government in Health"] },
     { subject: "English", icon: PenTool, color: "text-pink-600", bg: "bg-pink-100", topics: ["Modals", "Determiners", "Reported Speech", "Creative Writing", "Literature Analysis"] }
   ],
   "Class 8": [
-    { subject: "Mathematics", icon: Calculator, color: "text-blue-600", bg: "bg-blue-100", topics: ["Rational Numbers", "Linear Equations", "Quadrilaterals", "Squares & Square Roots", "Algebraic Expressions"] },
+    { subject: "Mathematics", icon: Calculator, color: "text-blue-700", bg: "bg-blue-100", topics: ["Rational Numbers", "Linear Equations", "Quadrilaterals", "Squares & Square Roots", "Algebraic Expressions"] },
     { subject: "Science", icon: Beaker, color: "text-teal-600", bg: "bg-teal-100", topics: ["Crop Production", "Microorganisms", "Force & Pressure", "Sound", "Chemical Effects of Current"] },
     { subject: "Social Science", icon: Globe, color: "text-orange-600", bg: "bg-orange-100", topics: ["Resources", "Land, Soil, Water", "The Indian Constitution", "Judiciary", "Colonialism"] },
     { subject: "English", icon: PenTool, color: "text-pink-600", bg: "bg-pink-100", topics: ["Complex Sentences", "Editing & Omission", "Story Writing", "Notice Writing", "Poetry Comprehension"] }
   ],
   "Class 9": [
-    { subject: "Mathematics", icon: Calculator, color: "text-blue-600", bg: "bg-blue-100", topics: ["Number Systems", "Polynomials", "Coordinate Geometry", "Linear Equations (2 vars)", "Euclid's Geometry"] },
+    { subject: "Mathematics", icon: Calculator, color: "text-blue-700", bg: "bg-blue-100", topics: ["Number Systems", "Polynomials", "Coordinate Geometry", "Linear Equations (2 vars)", "Euclid's Geometry"] },
     { subject: "Science", icon: Beaker, color: "text-teal-600", bg: "bg-teal-100", topics: ["Matter in Our Surroundings", "Is Matter Around Us Pure", "Atoms & Molecules", "The Fundamental Unit of Life"] },
     { subject: "Social Science", icon: Globe, color: "text-orange-600", bg: "bg-orange-100", topics: ["French Revolution", "Socialism in Europe", "India: Size & Location", "Constitutional Design"] },
     { subject: "English", icon: PenTool, color: "text-pink-600", bg: "bg-pink-100", topics: ["Integrated Grammar", "Descriptive Writing", "Diary Entry", "Literature (Beehive/Moments)"] }
   ],
   "Class 10": [
-    { subject: "Mathematics", icon: Calculator, color: "text-blue-600", bg: "bg-blue-100", topics: ["Real Numbers", "Polynomials", "Pair of Linear Equations", "Quadratic Equations", "Arithmetic Progressions"] },
+    { subject: "Mathematics", icon: Calculator, color: "text-blue-700", bg: "bg-blue-100", topics: ["Real Numbers", "Polynomials", "Pair of Linear Equations", "Quadratic Equations", "Arithmetic Progressions"] },
     { subject: "Science", icon: Beaker, color: "text-teal-600", bg: "bg-teal-100", topics: ["Chemical Reactions", "Acids, Bases & Salts", "Metals & Non-metals", "Life Processes", "Control & Coordination"] },
     { subject: "Social Science", icon: Globe, color: "text-orange-600", bg: "bg-orange-100", topics: ["Rise of Nationalism in Europe", "Nationalism in India", "Resources & Development", "Power Sharing"] },
     { subject: "English", icon: PenTool, color: "text-pink-600", bg: "bg-pink-100", topics: ["Formal Letter Writing", "Analytical Paragraphs", "Literature (First Flight)", "Footprints Without Feet"] }
@@ -135,19 +135,23 @@ export default function SkillsnapLanding() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-gray-900">Skill<span className="text-orange-600">Snap</span></span>
+            {/* LOGO UPDATE: Replaced text with Image. 
+                Using h-12 to make it large enough, w-auto to keep ratio. 
+            */}
+            <img 
+              src="/skillsnaplogotransparent.png" 
+              alt="SkillSnap Logo" 
+              className="h-[120px] w-auto object-contain" 
+            />
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-blue-900">
             <a href="#curriculum" className="hover:text-orange-600 transition-colors">Courses</a>
             <a href="#parents" className="hover:text-orange-600 transition-colors">For Parents</a>
             <button onClick={scrollToContact} className="hover:text-orange-600 transition-colors">Contact Us</button>
           </div>
           <button 
             onClick={scrollToContact}
-            className="bg-gray-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-gray-800 transition-all hover:scale-105 shadow-lg shadow-gray-200"
+            className="bg-blue-950 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-900 transition-all hover:scale-105 shadow-lg shadow-blue-200"
           >
             Talk to an Expert
           </button>
@@ -156,8 +160,8 @@ export default function SkillsnapLanding() {
 
       {/* --- Hero Section --- */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Background Blobs */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-teal-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
+        {/* Background Blobs - Updated colors to Blue/Orange */}
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-orange-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
@@ -169,7 +173,7 @@ export default function SkillsnapLanding() {
                 <Rocket size={14} fill="currentColor" />
                 Strong Foundations for Future Skills
               </div>
-              <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+              <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-blue-950 mb-6">
                 Master the Syllabus. <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500">
                   Crack the Future.
@@ -180,10 +184,10 @@ export default function SkillsnapLanding() {
               </p>
             </FadeIn>
 
-            {/* Lead Form Box (Contact) */}
+            {/* Lead Form Box */}
             <FadeIn delay={0.2}>
               <div id="contact-form" className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md scroll-mt-24">
-                <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-blue-900">
                   <span className="w-1.5 h-6 bg-orange-500 rounded-full"></span>
                   Get a Call Back
                 </h3>
@@ -216,7 +220,7 @@ export default function SkillsnapLanding() {
                   alt="Happy student learning coding" 
                   className="w-full h-full object-cover object-[70%_center]"
                 />
-                 {/* Gradient Overlay for Text Readability */}
+                 {/* Gradient Overlay */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
              </div>
              
@@ -232,7 +236,6 @@ export default function SkillsnapLanding() {
                className="bottom-20 -right-5" 
              />
              
-             {/* Replaced 'Review' with 'Feature Highlight' for authenticity */}
              <div className="absolute bottom-10 left-10 p-4 bg-white/90 backdrop-blur rounded-xl shadow-lg border border-teal-100 max-w-[200px]">
                 <div className="flex gap-2 items-center text-teal-600 mb-1">
                   <MessageCircle size={16} fill="currentColor" />
@@ -245,12 +248,11 @@ export default function SkillsnapLanding() {
         </div>
       </section>
 
-      {/* --- Social Proof (Brand Associations) --- */}
+      {/* --- Social Proof --- */}
       <section className="py-10 border-y border-gray-100 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Designed for students from top schools</p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-             {/* Placeholders for logos */}
              {['DPS', 'Ryan International', 'Kendriya Vidyalaya', 'Dav Public School'].map((school) => (
                <span key={school} className="text-xl font-bold text-gray-400 hover:text-gray-800 transition-colors">{school}</span>
              ))}
@@ -263,7 +265,7 @@ export default function SkillsnapLanding() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Parents Trust SkillSnap</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-blue-950 mb-4">Why Parents Trust SkillSnap</h2>
               <p className="text-lg text-gray-600">We balance academic rigour with modern skills.</p>
             </div>
           </FadeIn>
@@ -306,11 +308,11 @@ export default function SkillsnapLanding() {
         </div>
       </section>
 
-      {/* --- Curriculum Section (Updated) --- */}
-      <section id="curriculum" className="py-24 bg-teal-50">
+      {/* --- Curriculum Section --- */}
+      <section id="curriculum" className="py-24 bg-blue-50/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Explore Our Syllabus</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-blue-950 mb-4">Explore Our Syllabus</h2>
             <p className="text-lg text-gray-600">Select your child's class to see what they will learn.</p>
           </div>
 
@@ -323,8 +325,8 @@ export default function SkillsnapLanding() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-6 py-3 rounded-full text-sm font-bold transition-all whitespace-nowrap ${
                     activeTab === tab 
-                    ? "bg-gray-900 text-white shadow-md" 
-                    : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"
+                    ? "bg-blue-950 text-white shadow-md" 
+                    : "text-gray-500 hover:text-blue-900 hover:bg-gray-100"
                   }`}
                 >
                   {tab}
@@ -376,7 +378,8 @@ export default function SkillsnapLanding() {
       </section>
 
       {/* --- Student's Excitement (The Vibe) --- */}
-      <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+      {/* Changed bg-gray-900 to bg-blue-950 to match Logo Navy */}
+      <section className="py-24 bg-blue-950 text-white relative overflow-hidden">
         {/* Decorative Grid */}
         <div className="absolute inset-0 opacity-10" 
              style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
@@ -401,7 +404,7 @@ export default function SkillsnapLanding() {
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
-                        <p className="text-gray-400">{item.desc}</p>
+                        <p className="text-blue-100">{item.desc}</p>
                       </div>
                     </div>
                   </FadeIn>
@@ -414,10 +417,10 @@ export default function SkillsnapLanding() {
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-2 rounded-2xl border border-gray-700 shadow-2xl"
+                className="bg-gradient-to-br from-blue-900 to-blue-950 p-2 rounded-2xl border border-blue-800 shadow-2xl"
               >
                 {/* Mock UI of the Platform */}
-                <div className="aspect-video bg-gray-950 rounded-xl flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                <div className="aspect-video bg-black rounded-xl flex items-center justify-center relative overflow-hidden group cursor-pointer">
                   <div className="absolute inset-0 bg-orange-600/20 group-hover:bg-orange-600/10 transition-colors"></div>
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
                     <Play size={32} fill="white" className="text-white ml-1" />
@@ -438,7 +441,7 @@ export default function SkillsnapLanding() {
       {/* --- FAQ Section --- */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">Common Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-10 text-blue-950">Common Questions</h2>
           <div className="space-y-4">
             {[
               { q: "Is this a replacement for school?", a: "No, Skillsnap is a companion. We help students master their school syllabus so they score higher, while adding future skills like coding that schools often miss." },
@@ -465,12 +468,12 @@ export default function SkillsnapLanding() {
       </section>
 
       {/* --- CTA / Footer --- */}
-      <footer className="bg-gray-900 text-white pt-20 pb-10">
+      <footer className="bg-blue-950 text-white pt-20 pb-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
             <div className="max-w-md">
               <h2 className="text-3xl font-bold mb-4">Ready to boost your child's confidence?</h2>
-              <p className="text-gray-400">Join 5,000+ students learning smarter, not harder.</p>
+              <p className="text-blue-200">Join 5,000+ students learning smarter, not harder.</p>
             </div>
             <button 
               onClick={scrollToContact} 
@@ -480,8 +483,8 @@ export default function SkillsnapLanding() {
             </button>
           </div>
           
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-             <p>&copy; 2024 Skillsnap Education. All rights reserved.</p>
+          <div className="border-t border-blue-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-blue-300">
+             <p>&copy; 2024 Skillsnap Learning Pvt. Ltd. All rights reserved.</p>
              <div className="flex gap-6 mt-4 md:mt-0">
                <a href="#" className="hover:text-white">Privacy Policy</a>
                <a href="#" className="hover:text-white">Terms of Service</a>
