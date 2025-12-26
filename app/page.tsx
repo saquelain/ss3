@@ -159,15 +159,16 @@ export default function SkillsnapLanding() {
       </nav>
 
       {/* --- Hero Section --- */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Background Blobs - Updated colors to Blue/Orange */}
+      <section className="relative pt-40 pb-20 overflow-hidden">
+        {/* Background Blobs */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-orange-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
           
           {/* Left: Content */}
-          <div>
+          {/* Added 'flex flex-col items-center lg:items-start text-center lg:text-left' to center everything on mobile */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <FadeIn>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
                 <Rocket size={14} fill="currentColor" />
@@ -179,14 +180,15 @@ export default function SkillsnapLanding() {
                   Crack the Future.
                 </span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed mx-auto lg:mx-0">
                 The only platform for Class 6-10 that combines <strong>School Academics</strong> with <strong>Future Tech Skills</strong>. Get the guidance your child deserves.
               </p>
             </FadeIn>
 
             {/* Lead Form Box */}
             <FadeIn delay={0.2}>
-              <div id="contact-form" className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md scroll-mt-24">
+              {/* Added 'mx-auto lg:mx-0' to center the form box on mobile */}
+              <div id="contact-form" className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md w-full mx-auto lg:mx-0 scroll-mt-24 text-left">
                 <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-blue-900">
                   <span className="w-1.5 h-6 bg-orange-500 rounded-full"></span>
                   Get a Call Back
@@ -212,37 +214,37 @@ export default function SkillsnapLanding() {
           </div>
 
           {/* Right: Visual */}
-          <div className="relative hidden lg:block h-[600px]">
-             {/* Student Image Container */}
-             <div className="absolute inset-0 bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          {/* Removed 'hidden'. Added 'h-[400px]' for mobile and kept 'lg:h-[600px]' for desktop. Added 'mt-10' for spacing on mobile */}
+          <div className="relative block h-[400px] lg:h-[600px] mt-12 lg:mt-0 w-full max-w-lg mx-auto lg:max-w-none">
+             {/* Illustration Container */}
+             <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <img 
-                  src="/hero-student.png" 
-                  alt="Happy student learning coding" 
-                  className="w-full h-full object-cover object-[70%_center]"
+                  src="/hero-illustration.png" 
+                  alt="Students learning with tablet illustration" 
+                  className="w-full h-full object-contain bg-white"
                 />
-                 {/* Gradient Overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
              </div>
              
-             {/* Floating Elements */}
+             {/* Floating Elements - Adjusted positions slightly for smaller screens */}
              <FloatingBadge 
                icon={Award} 
                text="Top Scorer" 
-               className="top-10 -left-10" 
+               className="top-6 -left-4 lg:top-12 lg:-left-8 scale-90 lg:scale-100" 
              />
              <FloatingBadge 
                icon={Code} 
                text="Tech Wizard" 
-               className="bottom-20 -right-5" 
+               className="bottom-16 -right-2 lg:bottom-24 lg:-right-6 scale-90 lg:scale-100" 
              />
              
-             <div className="absolute bottom-10 left-10 p-4 bg-white/90 backdrop-blur rounded-xl shadow-lg border border-teal-100 max-w-[200px]">
+             <div className="absolute bottom-4 left-4 lg:bottom-8 lg:left-8 p-3 lg:p-4 bg-white/95 backdrop-blur rounded-xl shadow-lg border border-teal-100 max-w-[160px] lg:max-w-[200px]">
                 <div className="flex gap-2 items-center text-teal-600 mb-1">
                   <MessageCircle size={16} fill="currentColor" />
-                  <span className="text-xs font-bold uppercase tracking-wide">Included</span>
+                  <span className="text-[10px] lg:text-xs font-bold uppercase tracking-wide">Included</span>
                 </div>
-                <p className="text-sm font-bold text-gray-800">Live Doubt Solving</p>
-                <p className="text-xs text-gray-500">Every Weekend</p>
+                <p className="text-xs lg:text-sm font-bold text-gray-800">Live Doubt Solving</p>
+                <p className="text-[10px] lg:text-xs text-gray-500">Every Weekend</p>
              </div>
           </div>
         </div>
