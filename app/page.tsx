@@ -24,6 +24,13 @@ import {
   MapPin
 } from 'lucide-react';
 
+const iconPaths: Record<string, string> = {
+  Calendar: "M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z",
+  Clock: "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 6v6l4 2",
+  Lock: "M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2zM7 11V7a5 5 0 0 1 10 0v4",
+  Code: "M16 18l6-6-6-6M8 6l-6 6 6 6"
+};
+
 // ===========================================
 // ANIMATION 1: Character-by-Character Text Reveal
 // ===========================================
@@ -85,6 +92,39 @@ const AnimatedText = ({
     </motion.span>
   );
 };
+
+// IconDrawing
+const DrawingIcon = ({ 
+  iconName, 
+  color 
+}: { 
+  iconName: string; 
+  color: string;
+}) => (
+  <svg
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={color}
+  >
+    <motion.path
+      d={iconPaths[iconName] || iconPaths.Calendar}
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: [0, 1, 1, 0] }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+        times: [0, 0.4, 0.6, 1]
+      }}
+    />
+  </svg>
+);
 
 // Gradient text with character animation
 const AnimatedGradientText = ({ 
@@ -247,8 +287,8 @@ const LearningJourney = () => {
           
           <FadeIn delay={0.1}>
             <div className="h-full bg-blue-50/50 rounded-3xl p-8 border border-blue-100 flex flex-col hover:shadow-lg transition-all duration-300">
-               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-blue-600 mb-6">
-                 <Calendar size={28} />
+               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                 <DrawingIcon iconName="Calendar" color="text-blue-600" />
                </div>
                <h3 className="text-xl font-bold text-blue-950 mb-3">Structured Weekday Learning</h3>
                <p className="text-gray-600 mb-6 flex-grow">
@@ -262,8 +302,8 @@ const LearningJourney = () => {
 
           <FadeIn delay={0.2}>
             <div className="h-full bg-orange-50/50 rounded-3xl p-8 border border-orange-100 flex flex-col hover:shadow-lg transition-all duration-300">
-               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-orange-600 mb-6">
-                 <Clock size={28} />
+               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                 <DrawingIcon iconName="Clock" color="text-orange-600" />
                </div>
                <h3 className="text-xl font-bold text-blue-950 mb-3">The 50-Minute Power Cycle</h3>
                <p className="text-gray-600 mb-6 flex-grow">
@@ -288,8 +328,8 @@ const LearningJourney = () => {
 
           <FadeIn delay={0.3}>
             <div className="h-full bg-teal-50/50 rounded-3xl p-8 border border-teal-100 flex flex-col hover:shadow-lg transition-all duration-300">
-               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-teal-600 mb-6">
-                 <Lock size={28} />
+               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                 <DrawingIcon iconName="Lock" color="text-teal-600" />
                </div>
                <h3 className="text-xl font-bold text-blue-950 mb-3">The "Unlock" System</h3>
                <p className="text-gray-600 mb-6 flex-grow">
@@ -304,8 +344,8 @@ const LearningJourney = () => {
 
           <FadeIn delay={0.4}>
             <div className="h-full bg-purple-50/50 rounded-3xl p-8 border border-purple-100 flex flex-col hover:shadow-lg transition-all duration-300">
-               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-purple-600 mb-6">
-                 <Code size={28} />
+               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                 <DrawingIcon iconName="Code" color="text-purple-600" />
                </div>
                <h3 className="text-xl font-bold text-blue-950 mb-3">Weekend Innovation Labs</h3>
                <p className="text-gray-600 mb-6 flex-grow">
