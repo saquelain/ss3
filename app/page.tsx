@@ -645,7 +645,15 @@ export default function SkillsnapLanding() {
             idx >= 3 ? 'lg:col-span-1 lg:mx-0' : ''
           }`}>
             <div className={`w-14 h-14 ${feature.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-              <feature.icon size={28} className={feature.color} />
+                <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{
+                    duration: 0.5,
+                    ease: "easeInOut"
+                    }}
+                >
+                    <feature.icon size={28} className={feature.color} />
+                </motion.div>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
             <p className="text-gray-600 leading-relaxed text-sm">{feature.desc}</p>
