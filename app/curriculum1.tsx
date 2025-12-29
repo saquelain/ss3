@@ -13,7 +13,7 @@ import {
 export const CURRICULUM_DATA: Record<string, any> = {
   "Class 6": [
     {
-      subject: "Mathematics: Building Strong Maths Foundations the Fun Way",
+      subject: "Mathematics",
       tagline: "Building Strong Maths Foundations the Fun Way",
       icon: Calculator,
       color: "text-blue-700",
@@ -97,7 +97,7 @@ export const CURRICULUM_DATA: Record<string, any> = {
     },
 
     {
-      subject: "English: English Made Easy, Engaging, and Effective",
+      subject: "English",
       tagline: "English Made Easy, Engaging, and Effective",
       icon: PenTool,
       color: "text-pink-600",
@@ -181,7 +181,7 @@ export const CURRICULUM_DATA: Record<string, any> = {
     },
 
     {
-      subject: "Interactive Science: Explore, Experiment, Excel in Science",
+      subject: "Interactive Science",
       tagline: "Explore, Experiment, Excel in Science",
       icon: Beaker,
       color: "text-teal-600",
@@ -265,7 +265,7 @@ export const CURRICULUM_DATA: Record<string, any> = {
     },
 
     {
-      subject: "Exploratory Social Studies: Discover, Analyze, and Connect with the World",
+      subject: "Exploratory Social Studies",
       tagline: "Discover, Analyze, and Connect with the World",
       icon: Globe,
       color: "text-orange-600",
