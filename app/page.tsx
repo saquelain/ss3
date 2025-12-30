@@ -548,13 +548,13 @@ const LearningJourney = () => {
                     )}
                     
                     {card.extra.type === "tags" && (
-                      <div className="flex gap-2 flex-wrap">
+                    <div className="flex gap-2 flex-wrap">
                         {card.extra.items?.map((tag, i) => (
-                          <span key={i} className="px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-bold">
-                            {tag}
-                          </span>
+                        <span key={i} className="px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-bold">
+                            {tag as string}
+                        </span>
                         ))}
-                      </div>
+                    </div>
                     )}
                     
                     {card.extra.type === "icon-note" && (
