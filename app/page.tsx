@@ -828,7 +828,7 @@ export default function SkillsnapLanding() {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800 selection:bg-orange-200">
+    <div className="min-h-screen bg-white font-montserrat text-gray-800 selection:bg-orange-200">
       
       {/* --- Navbar --- */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
