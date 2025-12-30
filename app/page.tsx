@@ -633,14 +633,14 @@ const AppDownload = () => {
                 </div>
              </div>
              
-             <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl">
+             <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl group cursor-pointer">
                 <img 
-                  src="/girl-holding-phone.png" 
-                  alt="Happy Indian student showing learning app on phone" 
-                  className="w-full h-auto object-cover"
+                    src="/girl-holding-phone.png" 
+                    alt="Happy Indian student showing learning app on phone" 
+                    className="w-full h-auto object-cover transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 to-transparent"></div>
-             </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 to-transparent transition-opacity duration-500 group-hover:opacity-70"></div>
+            </div>
            </div>
 
          </div>
