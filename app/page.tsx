@@ -594,7 +594,26 @@ const AppDownload = () => {
              
              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                Go at your own rhythm.<br />
-               <span className="text-orange-500">24/7 Access from anywhere.</span>
+               <motion.span
+                    className="inline-block"
+                    style={{
+                        backgroundImage: "linear-gradient(90deg, #f97316 0%, #f97316 40%, #ffffff 50%, #f97316 60%, #f97316 100%)",
+                        backgroundSize: "200% 100%",
+                        WebkitBackgroundClip: "text",
+                        backgroundClip: "text",
+                        color: "transparent"
+                    }}
+                    animate={{
+                        backgroundPosition: ["200% 0%", "-200% 0%"]
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                    >
+                    24/7 Access from anywhere.
+                </motion.span>
              </h2>
              
              <p className="text-blue-200 text-lg mb-10 max-w-xl mx-auto lg:mx-0">
